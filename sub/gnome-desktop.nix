@@ -3,6 +3,7 @@
 {
   services.xserver.enable = true;
   services.xserver.excludePackages = [ pkgs.xterm ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
@@ -18,5 +19,6 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [ mesa.opencl ];
   };
 }
