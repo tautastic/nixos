@@ -26,6 +26,7 @@
     imports = [
       ./fonts.nix
       ./gnome-settings.nix
+      ./jetbrains.nix
       ./user-packages.nix
       ./keyboard-layout.nix
       ./librewolf.nix

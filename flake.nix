@@ -8,9 +8,14 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-jetbrains-plugins = {
+      url = "github:nix-community/nix-jetbrains-plugins";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, nix-jetbrains-plugins, ... }:
   let
     hostname = "nixos";
     system = "x86_64-linux";
@@ -32,7 +37,11 @@
 
       modules = [
         { system.stateVersion = stateVersion; }
-        home-manager.nixosModules.home-manager
+        home-manager.nixosModules.home-manager {
+          home-manager.extraSpecialArgs = {
+            inherit nix-jetbrains-plugins;
+          };
+        }
         ./sub/home-manager/home.nix
         ./sub/docker.nix
         ./sub/user.nix

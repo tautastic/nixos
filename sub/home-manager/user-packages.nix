@@ -32,5 +32,6 @@
     exiftool                # Meta information reader/writer
     picard                  # Music metadata reader/wrtier
     amberol                 # Music Player
+    yt-dlp                  # Program to download youtube videos to various formats
   ];
 }
