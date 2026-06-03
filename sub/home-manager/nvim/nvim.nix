@@ -39,7 +39,7 @@ in
     viAlias = true;
     vimAlias = true;
     defaultEditor = true;
-    extraLuaConfig = finalLuaConfig;
+    initLua = finalLuaConfig;
 
     plugins = with pkgs.vimPlugins; [
       lualine-nvim

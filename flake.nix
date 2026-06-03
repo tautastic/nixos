@@ -2,10 +2,10 @@
   description = "A declarative NixOS system configuration using Flakes";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -14,7 +14,7 @@
   let
     hostname = "nixos";
     system = "x86_64-linux";
-    stateVersion = "25.11";
+    stateVersion = "26.05";
 
     username = "tau";
     passwordHash = "DUMMY_HASH_REPLACE_DURING_INSTALL";
