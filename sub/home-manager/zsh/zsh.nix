@@ -30,7 +30,7 @@ let
 
     [[ -f "$HOME/.config/zsh/.p10k.zsh" ]] && source "$HOME/.config/zsh/.p10k.zsh"
 
-    [[ ! -r '/home/tera/.opam/opam-init/init.zsh' ]] || source '/home/tera/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+    [[ ! -r '/home/tau/.opam/opam-init/init.zsh' ]] || source '/home/tau/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
   '';
 
 in {
